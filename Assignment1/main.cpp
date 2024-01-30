@@ -15,10 +15,10 @@ int main(int argc, char** argv)
     list <int> data_List;       // Linked List data structure.
     list <int>::iterator i;     // Iterator.
 
-    // Parse commandline arguements.
-    for (int i = 0; i < argc; i++) 
+    // Get the file name and add it to a path.
+    if(argc > 0)
     {
-        fileName = argv[i];
+        fileName = "../" + string(argv[argc - 1]);
     }
 
     // Open file1.txt to perform a read operation.
